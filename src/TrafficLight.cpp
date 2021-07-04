@@ -7,6 +7,7 @@
 template <typename T>
 void  MessageQueue<T>::send(T &&message) {
   std::lock_guard<std::mutex> lck(_mtx);
+  _queue.clear();
   _queue.push_back(std::move(message));
 
   _cond.notify_one();
