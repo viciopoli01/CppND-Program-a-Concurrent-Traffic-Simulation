@@ -1,10 +1,10 @@
-cmake_minimum_required(VERSION 3.10.2)
+cmake_minimum_required(VERSION 3.11.3) # on mine is 3.10.2
 
 # set(CMAKE_CXX_STANDARD 17)
 project(OSM_A_star_search)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -pthread")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -pthread -g")
 
-set(OpenCV_DIR /home/viciopoli/InstalledLib/OpenCV4.4.0/lib/cmake/opencv4) 
+# set(OpenCV_DIR /home/viciopoli/InstalledLib/OpenCV4.4.0/lib/cmake/opencv4) 
 
 find_package(OpenCV 4.1 REQUIRED)
 
